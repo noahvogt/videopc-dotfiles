@@ -1,6 +1,6 @@
 #!/bin/bash
 
-possible_streams="$(v4l2-ctl --list-devices | grep "^Cam Link" -A 20 | \
+possible_streams="$(v4l2-ctl --list-devices | grep "^USB Video" -A 20 | \
                     grep "^\s*/dev/" | sed 's/^\s*//')"
 
 [ -z "$possible_streams" ] && exit
